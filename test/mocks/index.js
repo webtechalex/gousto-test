@@ -456,3 +456,535 @@ export const mockUpdatedState = [
     "selected": false
   }
 ]
+
+export const mockProductData = [
+    {
+      "id": "0009468c-33e9-11e7-b485-02859a19531d",
+      "sku": "AP-ACH-WIN-WHI-23-P",
+      "title": "Borsao Macabeo",
+      "description": "A flavoursome Summer wine made from the indigenous Macabeo grape in northern Spain. A balanced, modern white with flavours of ripe peach, zesty lemon and nutty undertones, it leaves the palate with a clean and fruity finish.",
+      "list_price": "6.95",
+      "is_vatable": true,
+      "is_for_sale": true,
+      "age_restricted": true,
+      "box_limit": "2",
+      "always_on_menu": false,
+      "created_at": "2017-05-08T13:22:27+0100",
+      "categories": [
+        {
+          "id": "faeedf8a-bf7d-11e5-a0f9-02fada0dd3b9",
+          "title": "Drinks Cabinet",
+          "box_limit": 7,
+          "is_default": false,
+          "recently_added": false,
+          "hidden": false,
+          "pivot": {
+            "created_at": "2017-05-08T13:22:46+0100"
+          }
+        },
+        {
+          "id": "785741fc-3854-11e6-87a5-06f9522b85fb",
+          "title": "Large Alcohol",
+          "box_limit": 2,
+          "is_default": false,
+          "recently_added": false,
+          "hidden": true,
+          "pivot": {
+            "created_at": "2017-05-08T13:22:46+0100"
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "00a0130e-bfea-11e7-a2c2-0617e74d8914",
+      "sku": "AP-FCD-BIS-06",
+      "title": "Love Shortie All Butter Shortbread",
+      "description": "A rich all butter shortbread, delicately sweet and crumbly with a hint of sea salt, straight out of Scotland. ",
+      "list_price": "3.95",
+      "is_vatable": false,
+      "is_for_sale": true,
+      "age_restricted": false,
+      "box_limit": "2",
+      "always_on_menu": false,
+      "created_at": "2017-11-02T16:22:21+0000",
+      "categories": [
+        {
+          "id": "384da59c-9452-11e6-87b0-06981aa90cf9",
+          "title": "Christmas",
+          "box_limit": 2,
+          "is_default": false,
+          "recently_added": false,
+          "hidden": false,
+          "pivot": {
+            "created_at": "2017-11-08T17:06:05+0000"
+          }
+        },
+        {
+          "id": "47d0e046-d12e-11e7-aba4-0617e74d8914",
+          "title": "Christmas sm",
+          "box_limit": 4,
+          "is_default": false,
+          "recently_added": false,
+          "hidden": true,
+          "pivot": {
+            "created_at": "2017-11-24T15:47:48+0000"
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "02c225f2-63b4-11e6-8516-023d2759e21d",
+      "sku": "AP-ACH-WIN-RED-21-P",
+      "title": "Rioja Reserva, Baron de Ebro",
+      "description": "Intriguing notes of vanilla and chocolate make this fruity, full-bodied wine unique. With a long, pleasant finish and woody aroma supporting it, this characterful wine is a good match with beef dishes.\nABV 14%.",
+      "list_price": "9.95",
+      "is_vatable": true,
+      "is_for_sale": true,
+      "age_restricted": true,
+      "box_limit": "2",
+      "always_on_menu": false,
+      "created_at": "2016-08-16T13:19:07+0100",
+      "categories": [
+        {
+          "id": "faeedf8a-bf7d-11e5-a0f9-02fada0dd3b9",
+          "title": "Drinks Cabinet",
+          "box_limit": 7,
+          "is_default": false,
+          "recently_added": false,
+          "hidden": false,
+          "pivot": {
+            "created_at": "2016-08-31T12:32:39+0100"
+          }
+        },
+        {
+          "id": "785741fc-3854-11e6-87a5-06f9522b85fb",
+          "title": "Large Alcohol",
+          "box_limit": 2,
+          "is_default": false,
+          "recently_added": false,
+          "hidden": true,
+          "pivot": {
+            "created_at": "2016-08-31T12:32:39+0100"
+          }
+        },
+        {
+          "id": "a44b4c22-e489-11e6-9d77-027ca04bdf39",
+          "title": "Most Popular",
+          "box_limit": 2,
+          "is_default": false,
+          "recently_added": false,
+          "hidden": false,
+          "pivot": {
+            "created_at": "2017-02-08T09:49:46+0000"
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "03117030-9127-11e6-8019-02886f33f4e9",
+      "sku": "AP-ACH-WIN-WHI-16-P",
+      "title": "Bantry Bay Chenin Blanc",
+      "description": "South Africa have adopted the Chenin Blanc grape, and to great effect, showcased in this wine. With delicate floral notes and a subtle pineapple flavour joined by striking lemon and grapefruit notes, it pairs particularly well with seafood. \nABC 12.5%",
+      "list_price": "7.95",
+      "is_vatable": true,
+      "is_for_sale": true,
+      "age_restricted": true,
+      "box_limit": "1",
+      "always_on_menu": false,
+      "created_at": "2016-10-13T09:25:42+0100",
+      "categories": [
+        {
+          "id": "faeedf8a-bf7d-11e5-a0f9-02fada0dd3b9",
+          "title": "Drinks Cabinet",
+          "box_limit": 7,
+          "is_default": false,
+          "recently_added": false,
+          "hidden": false,
+          "pivot": {
+            "created_at": "2016-10-13T09:26:04+0100"
+          }
+        },
+        {
+          "id": "785741fc-3854-11e6-87a5-06f9522b85fb",
+          "title": "Large Alcohol",
+          "box_limit": 2,
+          "is_default": false,
+          "recently_added": false,
+          "hidden": true,
+          "pivot": {
+            "created_at": "2016-10-13T09:26:04+0100"
+          }
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "05de669c-33e8-11e7-94c4-02859a19531d",
+      "sku": "AP-ACH-WIN-RED-32-P",
+      "title": "Nieto Malbec, Mendoza",
+      "description": "This great Argentinian Malbec from the well known Mendoza region is made from 40+ year old vines. Fruit flavour blends with hints of clove, pepper and cinnamon spice, with a fresh finish that's lovely with chicken and beef dishes. ",
+      "list_price": "10.95",
+      "is_vatable": true,
+      "is_for_sale": true,
+      "age_restricted": true,
+      "box_limit": "2",
+      "always_on_menu": false,
+      "created_at": "2017-05-08T13:15:28+0100",
+      "categories": [
+        {
+          "id": "faeedf8a-bf7d-11e5-a0f9-02fada0dd3b9",
+          "title": "Drinks Cabinet",
+          "box_limit": 7,
+          "is_default": false,
+          "recently_added": false,
+          "hidden": false,
+          "pivot": {
+            "created_at": "2017-05-08T13:15:53+0100"
+          }
+        },
+        {
+          "id": "785741fc-3854-11e6-87a5-06f9522b85fb",
+          "title": "Large Alcohol",
+          "box_limit": 2,
+          "is_default": false,
+          "recently_added": false,
+          "hidden": true,
+          "pivot": {
+            "created_at": "2017-05-08T13:15:53+0100"
+          }
+        }
+      ],
+      "images": []
+    }
+]
+
+export const mockProductState = [
+  {
+    "id": "0009468c-33e9-11e7-b485-02859a19531d",
+    "title": "Borsao Macabeo",
+    "description": "A flavoursome Summer wine made from the indigenous Macabeo grape in northern Spain. A balanced, modern white with flavours of ripe peach, zesty lemon and nutty undertones, it leaves the palate with a clean and fruity finish.",
+    "descriptionVisible": false,
+    "categories": [
+      {
+        "id": "faeedf8a-bf7d-11e5-a0f9-02fada0dd3b9",
+        "title": "Drinks Cabinet",
+        "box_limit": 7,
+        "is_default": false,
+        "recently_added": false,
+        "hidden": false,
+        "pivot": {
+          "created_at": "2017-05-08T13:22:46+0100"
+        }
+      },
+      {
+        "id": "785741fc-3854-11e6-87a5-06f9522b85fb",
+        "title": "Large Alcohol",
+        "box_limit": 2,
+        "is_default": false,
+        "recently_added": false,
+        "hidden": true,
+        "pivot": {
+          "created_at": "2017-05-08T13:22:46+0100"
+        }
+      }
+    ]
+  },
+  {
+    "id": "00a0130e-bfea-11e7-a2c2-0617e74d8914",
+    "title": "Love Shortie All Butter Shortbread",
+    "description": "A rich all butter shortbread, delicately sweet and crumbly with a hint of sea salt, straight out of Scotland. ",
+    "descriptionVisible": false,
+    "categories": [
+      {
+        "id": "384da59c-9452-11e6-87b0-06981aa90cf9",
+        "title": "Christmas",
+        "box_limit": 2,
+        "is_default": false,
+        "recently_added": false,
+        "hidden": false,
+        "pivot": {
+          "created_at": "2017-11-08T17:06:05+0000"
+        }
+      },
+      {
+        "id": "47d0e046-d12e-11e7-aba4-0617e74d8914",
+        "title": "Christmas sm",
+        "box_limit": 4,
+        "is_default": false,
+        "recently_added": false,
+        "hidden": true,
+        "pivot": {
+          "created_at": "2017-11-24T15:47:48+0000"
+        }
+      }
+    ]
+  },
+  {
+    "id": "02c225f2-63b4-11e6-8516-023d2759e21d",
+    "title": "Rioja Reserva, Baron de Ebro",
+    "description": "Intriguing notes of vanilla and chocolate make this fruity, full-bodied wine unique. With a long, pleasant finish and woody aroma supporting it, this characterful wine is a good match with beef dishes.\nABV 14%.",
+    "descriptionVisible": false,
+    "categories": [
+      {
+        "id": "faeedf8a-bf7d-11e5-a0f9-02fada0dd3b9",
+        "title": "Drinks Cabinet",
+        "box_limit": 7,
+        "is_default": false,
+        "recently_added": false,
+        "hidden": false,
+        "pivot": {
+          "created_at": "2016-08-31T12:32:39+0100"
+        }
+      },
+      {
+        "id": "785741fc-3854-11e6-87a5-06f9522b85fb",
+        "title": "Large Alcohol",
+        "box_limit": 2,
+        "is_default": false,
+        "recently_added": false,
+        "hidden": true,
+        "pivot": {
+          "created_at": "2016-08-31T12:32:39+0100"
+        }
+      },
+      {
+        "id": "a44b4c22-e489-11e6-9d77-027ca04bdf39",
+        "title": "Most Popular",
+        "box_limit": 2,
+        "is_default": false,
+        "recently_added": false,
+        "hidden": false,
+        "pivot": {
+          "created_at": "2017-02-08T09:49:46+0000"
+        }
+      }
+    ]
+  },
+  {
+    "id": "03117030-9127-11e6-8019-02886f33f4e9",
+    "title": "Bantry Bay Chenin Blanc",
+    "description": "South Africa have adopted the Chenin Blanc grape, and to great effect, showcased in this wine. With delicate floral notes and a subtle pineapple flavour joined by striking lemon and grapefruit notes, it pairs particularly well with seafood. \nABC 12.5%",
+    "descriptionVisible": false,
+    "categories": [
+      {
+        "id": "faeedf8a-bf7d-11e5-a0f9-02fada0dd3b9",
+        "title": "Drinks Cabinet",
+        "box_limit": 7,
+        "is_default": false,
+        "recently_added": false,
+        "hidden": false,
+        "pivot": {
+          "created_at": "2016-10-13T09:26:04+0100"
+        }
+      },
+      {
+        "id": "785741fc-3854-11e6-87a5-06f9522b85fb",
+        "title": "Large Alcohol",
+        "box_limit": 2,
+        "is_default": false,
+        "recently_added": false,
+        "hidden": true,
+        "pivot": {
+          "created_at": "2016-10-13T09:26:04+0100"
+        }
+      }
+    ]
+  },
+  {
+    "id": "05de669c-33e8-11e7-94c4-02859a19531d",
+    "title": "Nieto Malbec, Mendoza",
+    "description": "This great Argentinian Malbec from the well known Mendoza region is made from 40+ year old vines. Fruit flavour blends with hints of clove, pepper and cinnamon spice, with a fresh finish that's lovely with chicken and beef dishes. ",
+    "descriptionVisible": false,
+    "categories": [
+      {
+        "id": "faeedf8a-bf7d-11e5-a0f9-02fada0dd3b9",
+        "title": "Drinks Cabinet",
+        "box_limit": 7,
+        "is_default": false,
+        "recently_added": false,
+        "hidden": false,
+        "pivot": {
+          "created_at": "2017-05-08T13:15:53+0100"
+        }
+      },
+      {
+        "id": "785741fc-3854-11e6-87a5-06f9522b85fb",
+        "title": "Large Alcohol",
+        "box_limit": 2,
+        "is_default": false,
+        "recently_added": false,
+        "hidden": true,
+        "pivot": {
+          "created_at": "2017-05-08T13:15:53+0100"
+        }
+      }
+    ]
+  }
+]
+
+export const mockUpdatedProducts = [
+  {
+    "id": "0009468c-33e9-11e7-b485-02859a19531d",
+    "title": "Borsao Macabeo",
+    "description": "A flavoursome Summer wine made from the indigenous Macabeo grape in northern Spain. A balanced, modern white with flavours of ripe peach, zesty lemon and nutty undertones, it leaves the palate with a clean and fruity finish.",
+    "descriptionVisible": false,
+    "categories": [
+      {
+        "id": "faeedf8a-bf7d-11e5-a0f9-02fada0dd3b9",
+        "title": "Drinks Cabinet",
+        "box_limit": 7,
+        "is_default": false,
+        "recently_added": false,
+        "hidden": false,
+        "pivot": {
+          "created_at": "2017-05-08T13:22:46+0100"
+        }
+      },
+      {
+        "id": "785741fc-3854-11e6-87a5-06f9522b85fb",
+        "title": "Large Alcohol",
+        "box_limit": 2,
+        "is_default": false,
+        "recently_added": false,
+        "hidden": true,
+        "pivot": {
+          "created_at": "2017-05-08T13:22:46+0100"
+        }
+      }
+    ]
+  },
+  {
+    "id": "00a0130e-bfea-11e7-a2c2-0617e74d8914",
+    "title": "Love Shortie All Butter Shortbread",
+    "description": "A rich all butter shortbread, delicately sweet and crumbly with a hint of sea salt, straight out of Scotland. ",
+    "descriptionVisible": true,
+    "categories": [
+      {
+        "id": "384da59c-9452-11e6-87b0-06981aa90cf9",
+        "title": "Christmas",
+        "box_limit": 2,
+        "is_default": false,
+        "recently_added": false,
+        "hidden": false,
+        "pivot": {
+          "created_at": "2017-11-08T17:06:05+0000"
+        }
+      },
+      {
+        "id": "47d0e046-d12e-11e7-aba4-0617e74d8914",
+        "title": "Christmas sm",
+        "box_limit": 4,
+        "is_default": false,
+        "recently_added": false,
+        "hidden": true,
+        "pivot": {
+          "created_at": "2017-11-24T15:47:48+0000"
+        }
+      }
+    ]
+  },
+  {
+    "id": "02c225f2-63b4-11e6-8516-023d2759e21d",
+    "title": "Rioja Reserva, Baron de Ebro",
+    "description": "Intriguing notes of vanilla and chocolate make this fruity, full-bodied wine unique. With a long, pleasant finish and woody aroma supporting it, this characterful wine is a good match with beef dishes.\nABV 14%.",
+    "descriptionVisible": false,
+    "categories": [
+      {
+        "id": "faeedf8a-bf7d-11e5-a0f9-02fada0dd3b9",
+        "title": "Drinks Cabinet",
+        "box_limit": 7,
+        "is_default": false,
+        "recently_added": false,
+        "hidden": false,
+        "pivot": {
+          "created_at": "2016-08-31T12:32:39+0100"
+        }
+      },
+      {
+        "id": "785741fc-3854-11e6-87a5-06f9522b85fb",
+        "title": "Large Alcohol",
+        "box_limit": 2,
+        "is_default": false,
+        "recently_added": false,
+        "hidden": true,
+        "pivot": {
+          "created_at": "2016-08-31T12:32:39+0100"
+        }
+      },
+      {
+        "id": "a44b4c22-e489-11e6-9d77-027ca04bdf39",
+        "title": "Most Popular",
+        "box_limit": 2,
+        "is_default": false,
+        "recently_added": false,
+        "hidden": false,
+        "pivot": {
+          "created_at": "2017-02-08T09:49:46+0000"
+        }
+      }
+    ]
+  },
+  {
+    "id": "03117030-9127-11e6-8019-02886f33f4e9",
+    "title": "Bantry Bay Chenin Blanc",
+    "description": "South Africa have adopted the Chenin Blanc grape, and to great effect, showcased in this wine. With delicate floral notes and a subtle pineapple flavour joined by striking lemon and grapefruit notes, it pairs particularly well with seafood. \nABC 12.5%",
+    "descriptionVisible": false,
+    "categories": [
+      {
+        "id": "faeedf8a-bf7d-11e5-a0f9-02fada0dd3b9",
+        "title": "Drinks Cabinet",
+        "box_limit": 7,
+        "is_default": false,
+        "recently_added": false,
+        "hidden": false,
+        "pivot": {
+          "created_at": "2016-10-13T09:26:04+0100"
+        }
+      },
+      {
+        "id": "785741fc-3854-11e6-87a5-06f9522b85fb",
+        "title": "Large Alcohol",
+        "box_limit": 2,
+        "is_default": false,
+        "recently_added": false,
+        "hidden": true,
+        "pivot": {
+          "created_at": "2016-10-13T09:26:04+0100"
+        }
+      }
+    ]
+  },
+  {
+    "id": "05de669c-33e8-11e7-94c4-02859a19531d",
+    "title": "Nieto Malbec, Mendoza",
+    "description": "This great Argentinian Malbec from the well known Mendoza region is made from 40+ year old vines. Fruit flavour blends with hints of clove, pepper and cinnamon spice, with a fresh finish that's lovely with chicken and beef dishes. ",
+    "descriptionVisible": false,
+    "categories": [
+      {
+        "id": "faeedf8a-bf7d-11e5-a0f9-02fada0dd3b9",
+        "title": "Drinks Cabinet",
+        "box_limit": 7,
+        "is_default": false,
+        "recently_added": false,
+        "hidden": false,
+        "pivot": {
+          "created_at": "2017-05-08T13:15:53+0100"
+        }
+      },
+      {
+        "id": "785741fc-3854-11e6-87a5-06f9522b85fb",
+        "title": "Large Alcohol",
+        "box_limit": 2,
+        "is_default": false,
+        "recently_added": false,
+        "hidden": true,
+        "pivot": {
+          "created_at": "2017-05-08T13:15:53+0100"
+        }
+      }
+    ]
+  }
+]
