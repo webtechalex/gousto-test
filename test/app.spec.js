@@ -31,16 +31,6 @@ import {
   mockUpdatedProducts
 } from './mocks';
 
-const initialState = {
-  categoriesAreLoading: false,
-  categoriesHaveErrored: false,
-  categoriesResponse: [],
-  productsResponse: [],
-  productsAreLoading: false,
-  productsHaveErrored: false,
-  productSearchInput: ''
-}
-
 describe('environment', function() {
   it('should run a test', function() {
     expect(true).to.equal(true);
