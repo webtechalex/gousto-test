@@ -1,6 +1,6 @@
 import {FETCH_PRODUCTS_SUCCESS, TOGGLE_PRODUCT_VISIBILITY} from '../actions';
 
-const productsReducer = (state = [], action) => {
+const productsResponseReducer = (state = [], action) => {
   switch (action && action.type) {
     case FETCH_PRODUCTS_SUCCESS: {
       return action.products.map(product => {
@@ -25,4 +25,4 @@ const productsReducer = (state = [], action) => {
   return state;
 }
 
-export default productsReducer;
+export default productsResponseReducer;

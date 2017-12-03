@@ -1,7 +1,7 @@
-import categoriesReducer from './categoriesReducer';
-import productsReducer from './productsReducer';
+import categoriesResponseReducer from './categoriesReducer';
+import productsResponseReducer from './productsReducer';
 
 export {
-  categoriesReducer,
-  productsReducer
+  categoriesResponseReducer,
+  productsResponseReducer
 };
