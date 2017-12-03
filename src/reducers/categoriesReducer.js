@@ -1,6 +1,6 @@
 import {FETCH_CATEGORIES_SUCCESS, SELECT_CATEGORY} from '../actions';
 
-const categoriesResponseReducer = (state = [], action) => {
+const categoriesResponse = (state = [], action) => {
   switch (action && action.type) {
     case FETCH_CATEGORIES_SUCCESS: {
       return action.categories.map(category => {
@@ -23,4 +23,4 @@ const categoriesResponseReducer = (state = [], action) => {
   return state;
 };
 
-export default categoriesResponseReducer;
+export default categoriesResponse;

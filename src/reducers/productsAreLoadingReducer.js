@@ -1,10 +1,10 @@
-import {PRODUCTS_ARE_LOADING} from '../actions';
+import {FETCH_PRODUCTS_REQUEST} from '../actions';
 
-const productsAreLoadingReducer = (state = false, action) => {
-  if(action && action.type === PRODUCTS_ARE_LOADING) {
+const productsAreLoading = (state = false, action) => {
+  if(action && action.type === FETCH_PRODUCTS_REQUEST) {
     return action.productsAreLoading;
   }
   return state;
 }
 
-export default productsAreLoadingReducer;
+export default productsAreLoading;

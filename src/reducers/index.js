@@ -1,17 +1,31 @@
-import categoriesResponseReducer from './categoriesReducer';
-import productsResponseReducer from './productsReducer';
-import categoriesAreLoadingReducer from './categoriesAreLoadingReducer';
-import categoriesHaveErroredReducer from './categoriesHaveErroredReducer';
-import productsAreLoadingReducer from './productsAreLoadingReducer';
-import productsHaveErroredReducer from './productsHaveErroredReducer';
-import productSearchInputReducer from './productSearchInputReducer';
+import {combineReducers} from 'redux';
+
+import categoriesResponse from './categoriesReducer';
+import productsResponse from './productsReducer';
+import categoriesAreLoading from './categoriesAreLoadingReducer';
+import categoriesHaveErrored from './categoriesHaveErroredReducer';
+import productsAreLoading from './productsAreLoadingReducer';
+import productsHaveErrored from './productsHaveErroredReducer';
+import productSearchInput from './productSearchInputReducer';
 
 export {
-  categoriesAreLoadingReducer,
-  categoriesHaveErroredReducer,
-  categoriesResponseReducer,
-  productsResponseReducer,
-  productsAreLoadingReducer,
-  productsHaveErroredReducer,
-  productSearchInputReducer
-};
+  categoriesAreLoading,
+  categoriesHaveErrored,
+  categoriesResponse,
+  productsResponse,
+  productsAreLoading,
+  productsHaveErrored,
+  productSearchInput
+}
+
+const productSearchApp = combineReducers({
+  categoriesAreLoading,
+  categoriesHaveErrored,
+  categoriesResponse,
+  productsResponse,
+  productsAreLoading,
+  productsHaveErrored,
+  productSearchInput
+});
+
+export default productSearchApp;

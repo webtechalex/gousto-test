@@ -2,22 +2,22 @@ export const FETCH_CATEGORIES_SUCCESS = 'FETCH_CATEGORIES_SUCCESS';
 export const SELECT_CATEGORY = 'SELECT_CATEGORY';
 export const FETCH_PRODUCTS_SUCCESS = 'FETCH_PRODUCTS_SUCCESS';
 export const TOGGLE_PRODUCT_VISIBILITY = 'TOGGLE_PRODUCT_VISIBILITY';
-export const CATEGORIES_ARE_LOADING = 'CATEGORIES_ARE_LOADING';
-export const CATEGORIES_HAVE_ERRORED = 'CATEGORIES_HAVE_ERRORED';
-export const PRODUCTS_ARE_LOADING = 'PRODUCTS_ARE_LOADING';
-export const PRODUCTS_HAVE_ERRORED = 'PRODUCTS_HAVE_ERRORED';
+export const FETCH_CATEGORIES_REQUEST = 'FETCH_CATEGORIES_REQUEST';
+export const FETCH_CATEGORIES_ERROR = 'FETCH_CATEGORIES_ERROR';
+export const FETCH_PRODUCTS_REQUEST = 'FETCH_PRODUCTS_REQUEST';
+export const FETCH_PRODUCTS_ERROR = 'FETCH_PRODUCTS_ERROR';
 export const UPDATE_PRODUCT_SEARCH_INPUT_VALUE = 'UPDATE_PRODUCT_SEARCH_INPUT_VALUE';
 
-export const categoriesAreLoading = (categoriesAreLoading) => {
+export const fetchCategoriesRequest = (categoriesAreLoading) => {
   return {
-    type: CATEGORIES_ARE_LOADING,
+    type: FETCH_CATEGORIES_REQUEST,
     categoriesAreLoading
   };
 }
 
-export const categoriesHaveErrored = (categoriesHaveErrored) => {
+export const fetchCategoriesError = (categoriesHaveErrored) => {
   return {
-    type: CATEGORIES_HAVE_ERRORED,
+    type: FETCH_CATEGORIES_ERROR,
     categoriesHaveErrored
   };
 }
@@ -36,16 +36,16 @@ export const selectCategory = (id) => {
   };
 };
 
-export const productsAreLoading = (productsAreLoading) => {
+export const fetchProductsRequest = (productsAreLoading) => {
   return {
-    type: PRODUCTS_ARE_LOADING,
+    type: FETCH_PRODUCTS_REQUEST,
     productsAreLoading
   };
 };
 
-export const productsHaveErrored = (productsHaveErrored) => {
+export const fetchProductsError = (productsHaveErrored) => {
   return {
-    type: PRODUCTS_HAVE_ERRORED,
+    type: FETCH_PRODUCTS_ERROR,
     productsHaveErrored
   };
 }

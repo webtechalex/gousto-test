@@ -1,10 +1,10 @@
 import {UPDATE_PRODUCT_SEARCH_INPUT_VALUE} from '../actions';
 
-const productSearchInputReducer = (state = '', action) => {
+const productSearchInput = (state = '', action) => {
   if (action && action.type === UPDATE_PRODUCT_SEARCH_INPUT_VALUE) {
     return action.productSearchInputValue;
   }
   return state;
 }
 
-export default productSearchInputReducer;
+export default productSearchInput;

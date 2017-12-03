@@ -1,10 +1,10 @@
-import {CATEGORIES_HAVE_ERRORED} from '../actions';
+import {FETCH_CATEGORIES_ERROR} from '../actions';
 
-const categoriesHaveErroredReducer = (state = false, action) => {
-  if(action && action.type === CATEGORIES_HAVE_ERRORED) {
+const categoriesHaveErrored = (state = false, action) => {
+  if(action && action.type === FETCH_CATEGORIES_ERROR) {
     return action.categoriesHaveErrored;
   }
   return state;
 }
 
-export default categoriesHaveErroredReducer;
+export default categoriesHaveErrored;

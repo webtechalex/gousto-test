@@ -1,13 +1,13 @@
 import {expect} from 'chai';
 
 import {
-  categoriesResponseReducer,
-  productsResponseReducer,
-  categoriesAreLoadingReducer,
-  categoriesHaveErroredReducer,
-  productsAreLoadingReducer,
-  productsHaveErroredReducer,
-  productSearchInputReducer
+  categoriesResponse,
+  productsResponse,
+  categoriesAreLoading,
+  categoriesHaveErrored,
+  productsAreLoading,
+  productsHaveErrored,
+  productSearchInput
 } from '../src/reducers';
 
 import {
@@ -15,9 +15,10 @@ import {
   selectCategory,
   fetchProductsSuccess,
   toggleProductVisibility,
-  categoriesAreLoading, categoriesHaveErrored,
-  productsAreLoading,
-  productsHaveErrored,
+  fetchCategoriesRequest,
+  fetchCategoriesError,
+  fetchProductsRequest,
+  fetchProductsError,
   updateProductSearchInputValue
 } from '../src/actions';
 
@@ -30,6 +31,16 @@ import {
   mockUpdatedProducts
 } from './mocks';
 
+const initialState = {
+  categoriesAreLoading: false,
+  categoriesHaveErrored: false,
+  categoriesResponse: [],
+  productsResponse: [],
+  productsAreLoading: false,
+  productsHaveErrored: false,
+  productSearchInput: ''
+}
+
 describe('environment', function() {
   it('should run a test', function() {
     expect(true).to.equal(true);
@@ -38,72 +49,72 @@ describe('environment', function() {
 
 describe('categoriesReducer', function() {
   it('should return initial state when called with no arguments', function() {
-    const categories = categoriesResponseReducer();
+    const categories = categoriesResponse();
     expect(Array.isArray(categories));
     expect(categories.length).to.equal(0);
   });
 
   it('should update categoriesAreLoading state when passed categoriesAreLoading action', function() {
-    expect(categoriesAreLoadingReducer(false, categoriesAreLoading(true))).to.equal(true);
-    expect(categoriesAreLoadingReducer(true, categoriesAreLoading(false))).to.equal(false);
+    expect(categoriesAreLoading(false, fetchCategoriesRequest(true))).to.equal(true);
+    expect(categoriesAreLoading(true, fetchCategoriesRequest(false))).to.equal(false);
   });
 
   it('should update categoriesHaveErrored state when passed categoriesHaveErrored action', function() {
-    expect(categoriesHaveErroredReducer(false, categoriesHaveErrored(true))).to.equal(true);
-    expect(categoriesHaveErroredReducer(true, categoriesHaveErrored(false))).to.equal(false);
+    expect(categoriesHaveErrored(false, fetchCategoriesError(true))).to.equal(true);
+    expect(categoriesHaveErrored(true, fetchCategoriesError(false))).to.equal(false);
   });
 
   it('should map id, title and selected state to each received category', function() {
-    expect(categoriesResponseReducer([], fetchCategoriesSuccess(mockCategoryData))).to.eql(mockCategoryState);
+    expect(categoriesResponse([], fetchCategoriesSuccess(mockCategoryData))).to.eql(mockCategoryState);
   });
 
   it('should update the "selected" property when a category is selected', function() {
-    expect(categoriesResponseReducer(mockCategoryState, selectCategory('529ea59e-bf7e-11e5-840e-02fada0dd3b9'))).to.eql(mockUpdatedState)
+    expect(categoriesResponse(mockCategoryState, selectCategory('529ea59e-bf7e-11e5-840e-02fada0dd3b9'))).to.eql(mockUpdatedState)
   });
 
   it('should update all other "selected" properties to false when a category is selected', function() {
-    const updatedCategoryState = categoriesResponseReducer(mockCategoryState, selectCategory('529ea59e-bf7e-11e5-840e-02fada0dd3b9'))
-    const newUpdatedCategoryState = categoriesResponseReducer(mockCategoryState, selectCategory('01b06fa0-bf7e-11e5-9c1e-02fada0dd3b9'))
-    expect(categoriesResponseReducer(updatedCategoryState, selectCategory('01b06fa0-bf7e-11e5-9c1e-02fada0dd3b9'))).to.eql(newUpdatedCategoryState);
+    const updatedCategoryState = categoriesResponse(mockCategoryState, selectCategory('529ea59e-bf7e-11e5-840e-02fada0dd3b9'))
+    const newUpdatedCategoryState = categoriesResponse(mockCategoryState, selectCategory('01b06fa0-bf7e-11e5-9c1e-02fada0dd3b9'))
+    expect(categoriesResponse(updatedCategoryState, selectCategory('01b06fa0-bf7e-11e5-9c1e-02fada0dd3b9'))).to.eql(newUpdatedCategoryState);
   });
 
   it('should return the current state when passed an invalid or undefined action', function() {
-    expect(categoriesResponseReducer(mockCategoryState)).to.equal(mockCategoryState);
+    expect(categoriesResponse(mockCategoryState)).to.equal(mockCategoryState);
   });
 });
 
 describe('productsReducer', function() {
   it('should return initial state when called with no arguments', function() {
-    const products = productsResponseReducer();
+    const products = productsResponse();
     expect(Array.isArray(products)).to.equal(true);
     expect(products.length).to.equal(0);
   });
 
   it('should update productsAreLoading state when passed productsAreLoading action', function() {
-    expect(productsAreLoadingReducer(false, productsAreLoading(true))).to.equal(true);
-    expect(productsAreLoadingReducer(true, productsAreLoading(false))).to.equal(false);
+    expect(productsAreLoading(false, fetchProductsRequest(true))).to.equal(true);
+    expect(productsAreLoading(true, fetchProductsRequest(false))).to.equal(false);
   });
 
   it('should update productsHaveErrored state when passed productsHaveErrored action', function() {
-    expect(productsHaveErroredReducer(false, productsHaveErrored(true))).to.equal(true);
-    expect(productsHaveErroredReducer(true, productsHaveErrored(false))).to.equal(false);
+    expect(productsHaveErrored(false, fetchProductsError(true))).to.equal(true);
+    expect(productsHaveErrored(true, fetchProductsError(false))).to.equal(false);
   });
 
   it('should map id, title and description to each received product', function() {
-    expect(productsResponseReducer([], fetchProductsSuccess(mockProductData))).to.eql(mockProductState);
+    expect(productsResponse([], fetchProductsSuccess(mockProductData))).to.eql(mockProductState);
   });
 
   it('should update the "descriptionVisible" property when a product is selected', function() {
-    expect(productsResponseReducer(mockProductState, toggleProductVisibility('00a0130e-bfea-11e7-a2c2-0617e74d8914'))).to.eql(mockUpdatedProducts);
+    expect(productsResponse(mockProductState, toggleProductVisibility('00a0130e-bfea-11e7-a2c2-0617e74d8914'))).to.eql(mockUpdatedProducts);
   });
 });
 
 describe('productSearchInputFieldReducer', function() {
   it('should return initial state when called with no arguments', function() {
-    expect(productSearchInputReducer()).to.equal('');
+    expect(productSearchInput()).to.equal('');
   });
 
   it('should update the productSearchInputField state when passed updateProductSearchInputValue action', function() {
-    expect(productSearchInputReducer(updateProductSearchInputValue('hello').productSearchInputValue)).to.equal('hello');
+    expect(productSearchInput('', updateProductSearchInputValue('hello'))).to.equal('hello');
   });
 });

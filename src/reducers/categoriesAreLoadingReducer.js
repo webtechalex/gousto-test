@@ -1,10 +1,10 @@
-import {CATEGORIES_ARE_LOADING} from '../actions';
+import {FETCH_CATEGORIES_REQUEST} from '../actions';
 
-const categoriesAreLoadingReducer = (state = false, action) => {
-  if(action && action.type === CATEGORIES_ARE_LOADING) {
+const categoriesAreLoading = (state = false, action) => {
+  if(action && action.type === FETCH_CATEGORIES_REQUEST) {
     return action.categoriesAreLoading;
   }
   return state;
 }
 
-export default categoriesAreLoadingReducer;
+export default categoriesAreLoading;

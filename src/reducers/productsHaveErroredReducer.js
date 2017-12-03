@@ -1,10 +1,10 @@
-import {PRODUCTS_HAVE_ERRORED} from '../actions';
+import {FETCH_PRODUCTS_ERROR} from '../actions';
 
-const productsHaveErroredReducer = (state = false, action) => {
-  if(action && action.type === PRODUCTS_HAVE_ERRORED) {
+const productsHaveErrored = (state = false, action) => {
+  if(action && action.type === FETCH_PRODUCTS_ERROR) {
     return action.productsHaveErrored;
   }
   return state;
 }
 
-export default productsHaveErroredReducer;
+export default productsHaveErrored;
