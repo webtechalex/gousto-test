@@ -24,10 +24,10 @@ export const fetchCategoriesError = (categoriesHaveErrored) => {
   };
 }
 
-export const fetchCategoriesSuccess = (categories) => {
+export const fetchCategoriesSuccess = (categoriesResponse) => {
   return {
     type: FETCH_CATEGORIES_SUCCESS,
-    categories
+    categoriesResponse
   };
 };
 
@@ -78,9 +78,8 @@ export const fetchCategories = () => {
     dispatch(fetchCategoriesRequest(true));
 
     axios.get('https://api.gousto.co.uk/products/v2.0/categories')
-      .then(response => response.json())
       .then(json => {
-        dispatch(fetchCategoriesSuccess(json.data));
+        dispatch(fetchCategoriesSuccess(json.data.data));
         dispatch(fetchCategoriesRequest(false));
       });
   }
@@ -91,7 +90,6 @@ export const fetchProducts = () => {
     dispatch(fetchProductsRequest(true));
 
     axios.get('https://api.gousto.co.uk/products/v2.0/products?includes[]=categories&includes[]=attributes&sort=position&image_sizes[]=365&image_sizes[]=400&period_id=120')
-      .then(response => response.json())
       .then(json => {
         dispatch(fetchProductsSuccess(json.data));
         dispatch(fetchProductsRequest(false));

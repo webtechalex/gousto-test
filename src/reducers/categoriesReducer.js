@@ -3,7 +3,7 @@ import {FETCH_CATEGORIES_SUCCESS, SELECT_CATEGORY} from '../actions';
 const categoriesResponse = (state = [], action) => {
   switch (action && action.type) {
     case FETCH_CATEGORIES_SUCCESS: {
-      return action.categories.map(category => {
+      return action.categoriesResponse.map(category => {
         return {
           id: category.id,
           title: category.title,
