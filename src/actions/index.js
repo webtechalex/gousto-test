@@ -4,6 +4,8 @@ export const FETCH_PRODUCTS_SUCCESS = 'FETCH_PRODUCTS_SUCCESS';
 export const TOGGLE_PRODUCT_VISIBILITY = 'TOGGLE_PRODUCT_VISIBILITY';
 export const CATEGORIES_ARE_LOADING = 'CATEGORIES_ARE_LOADING';
 export const CATEGORIES_HAVE_ERRORED = 'CATEGORIES_HAVE_ERRORED';
+export const PRODUCTS_ARE_LOADING = 'PRODUCTS_ARE_LOADING';
+export const PRODUCTS_HAVE_ERRORED = 'PRODUCTS_HAVE_ERRORED';
 
 export const categoriesAreLoading = (categoriesAreLoading) => {
   return {
@@ -32,6 +34,20 @@ export const selectCategory = (id) => {
     id
   };
 };
+
+export const productsAreLoading = (productsAreLoading) => {
+  return {
+    type: PRODUCTS_ARE_LOADING,
+    productsAreLoading
+  };
+};
+
+export const productsHaveErrored = (productsHaveErrored) => {
+  return {
+    type: PRODUCTS_HAVE_ERRORED,
+    productsHaveErrored
+  };
+}
 
 export const fetchProductsSuccess = (products) => {
   return {

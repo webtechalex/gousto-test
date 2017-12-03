@@ -1,7 +1,7 @@
 import {expect} from 'chai';
 
-import {categoriesResponseReducer, productsResponseReducer, categoriesAreLoadingReducer, categoriesHaveErroredReducer} from '../src/reducers';
-import {fetchCategoriesSuccess, selectCategory, fetchProductsSuccess, toggleProductVisibility, categoriesAreLoading, categoriesHaveErrored} from '../src/actions';
+import {categoriesResponseReducer, productsResponseReducer, categoriesAreLoadingReducer, categoriesHaveErroredReducer, productsAreLoadingReducer, productsHaveErroredReducer} from '../src/reducers';
+import {fetchCategoriesSuccess, selectCategory, fetchProductsSuccess, toggleProductVisibility, categoriesAreLoading, categoriesHaveErrored, productsAreLoading, productsHaveErrored} from '../src/actions';
 import {mockCategoryData, mockCategoryState, mockUpdatedState, mockProductData, mockProductState, mockUpdatedProducts} from './mocks';
 
 describe('environment', function() {
@@ -51,6 +51,16 @@ describe('productsReducer', function() {
     const products = productsResponseReducer();
     expect(Array.isArray(products)).to.equal(true);
     expect(products.length).to.equal(0);
+  });
+
+  it('should update productsAreLoading state when passed productsAreLoading action', function() {
+    expect(productsAreLoadingReducer(false, productsAreLoading(true))).to.equal(true);
+    expect(productsAreLoadingReducer(true, productsAreLoading(false))).to.equal(false);
+  });
+
+  it('should update productsHaveErrored state when passed productsHaveErrored action', function() {
+    expect(productsHaveErroredReducer(false, productsHaveErrored(true))).to.equal(true);
+    expect(productsHaveErroredReducer(true, productsHaveErrored(false))).to.equal(false);
   });
 
   it('should map id, title and description to each received product', function() {
