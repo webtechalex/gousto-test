@@ -5,12 +5,13 @@ import {Provider} from 'react-redux';
 import thunk from 'redux-thunk';
 
 import productSearchApp from './reducers';
+import App from './components/App';
 
 const store = createStore(productSearchApp, applyMiddleware(thunk));
 
 ReactDOM.render(
   <Provider store={store}>
-    <h1>Hello World!</h1>
+    <App />
   </Provider>,
   document.getElementById('app')
 );
