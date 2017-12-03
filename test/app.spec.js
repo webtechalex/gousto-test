@@ -1,8 +1,34 @@
 import {expect} from 'chai';
 
-import {categoriesResponseReducer, productsResponseReducer, categoriesAreLoadingReducer, categoriesHaveErroredReducer, productsAreLoadingReducer, productsHaveErroredReducer} from '../src/reducers';
-import {fetchCategoriesSuccess, selectCategory, fetchProductsSuccess, toggleProductVisibility, categoriesAreLoading, categoriesHaveErrored, productsAreLoading, productsHaveErrored} from '../src/actions';
-import {mockCategoryData, mockCategoryState, mockUpdatedState, mockProductData, mockProductState, mockUpdatedProducts} from './mocks';
+import {
+  categoriesResponseReducer,
+  productsResponseReducer,
+  categoriesAreLoadingReducer,
+  categoriesHaveErroredReducer,
+  productsAreLoadingReducer,
+  productsHaveErroredReducer,
+  productSearchInputReducer
+} from '../src/reducers';
+
+import {
+  fetchCategoriesSuccess,
+  selectCategory,
+  fetchProductsSuccess,
+  toggleProductVisibility,
+  categoriesAreLoading, categoriesHaveErrored,
+  productsAreLoading,
+  productsHaveErrored,
+  updateProductSearchInputValue
+} from '../src/actions';
+
+import {
+  mockCategoryData,
+  mockCategoryState,
+  mockUpdatedState,
+  mockProductData,
+  mockProductState,
+  mockUpdatedProducts
+} from './mocks';
 
 describe('environment', function() {
   it('should run a test', function() {
@@ -69,5 +95,15 @@ describe('productsReducer', function() {
 
   it('should update the "descriptionVisible" property when a product is selected', function() {
     expect(productsResponseReducer(mockProductState, toggleProductVisibility('00a0130e-bfea-11e7-a2c2-0617e74d8914'))).to.eql(mockUpdatedProducts);
+  });
+});
+
+describe('productSearchInputFieldReducer', function() {
+  it('should return initial state when called with no arguments', function() {
+    expect(productSearchInputReducer()).to.equal('');
+  });
+
+  it('should update the productSearchInputField state when passed updateProductSearchInputValue action', function() {
+    expect(productSearchInputReducer(updateProductSearchInputValue('hello').productSearchInputValue)).to.equal('hello');
   });
 });

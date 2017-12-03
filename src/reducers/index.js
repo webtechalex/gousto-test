@@ -4,6 +4,7 @@ import categoriesAreLoadingReducer from './categoriesAreLoadingReducer';
 import categoriesHaveErroredReducer from './categoriesHaveErroredReducer';
 import productsAreLoadingReducer from './productsAreLoadingReducer';
 import productsHaveErroredReducer from './productsHaveErroredReducer';
+import productSearchInputReducer from './productSearchInputReducer';
 
 export {
   categoriesAreLoadingReducer,
@@ -11,5 +12,6 @@ export {
   categoriesResponseReducer,
   productsResponseReducer,
   productsAreLoadingReducer,
-  productsHaveErroredReducer
+  productsHaveErroredReducer,
+  productSearchInputReducer
 };

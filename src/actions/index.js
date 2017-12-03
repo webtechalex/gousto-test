@@ -6,6 +6,7 @@ export const CATEGORIES_ARE_LOADING = 'CATEGORIES_ARE_LOADING';
 export const CATEGORIES_HAVE_ERRORED = 'CATEGORIES_HAVE_ERRORED';
 export const PRODUCTS_ARE_LOADING = 'PRODUCTS_ARE_LOADING';
 export const PRODUCTS_HAVE_ERRORED = 'PRODUCTS_HAVE_ERRORED';
+export const UPDATE_PRODUCT_SEARCH_INPUT_VALUE = 'UPDATE_PRODUCT_SEARCH_INPUT_VALUE';
 
 export const categoriesAreLoading = (categoriesAreLoading) => {
   return {
@@ -60,5 +61,12 @@ export const toggleProductVisibility = (id) => {
   return {
     type: TOGGLE_PRODUCT_VISIBILITY,
     id
+  }
+}
+
+export const updateProductSearchInputValue = (productSearchInputValue) => {
+  return {
+    type: UPDATE_PRODUCT_SEARCH_INPUT_VALUE,
+    productSearchInputValue
   }
 }
