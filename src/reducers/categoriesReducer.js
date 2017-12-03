@@ -1,4 +1,4 @@
-import {FETCH_CATEGORIES_SUCCESS, UPDATE_CATEGORY} from '../actions';
+import {FETCH_CATEGORIES_SUCCESS, SELECT_CATEGORY} from '../actions';
 
 const categoriesReducer = (state = [], action) => {
   switch (action && action.type) {
@@ -11,7 +11,7 @@ const categoriesReducer = (state = [], action) => {
         }
       });
     }
-    case UPDATE_CATEGORY: {
+    case SELECT_CATEGORY: {
       return state.map(category => {
         if (category.id !== action.id) {
           return Object.assign({}, category, {selected: false});

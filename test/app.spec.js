@@ -1,7 +1,7 @@
 import {expect} from 'chai';
 
 import {categoriesReducer, productsReducer} from '../src/reducers';
-import {fetchCategoriesSuccess, updateCategory, fetchProductsSuccess, toggleProductVisibility} from '../src/actions';
+import {fetchCategoriesSuccess, selectCategory, fetchProductsSuccess, toggleProductVisibility} from '../src/actions';
 import {mockCategoryData, mockCategoryState, mockUpdatedState, mockProductData, mockProductState, mockUpdatedProducts} from './mocks';
 
 describe('environment', function() {
@@ -22,13 +22,13 @@ describe('categoriesReducer', function() {
   });
 
   it('should update the "selected" property when a category is selected', function() {
-    expect(categoriesReducer(mockCategoryState, updateCategory('529ea59e-bf7e-11e5-840e-02fada0dd3b9'))).to.eql(mockUpdatedState)
+    expect(categoriesReducer(mockCategoryState, selectCategory('529ea59e-bf7e-11e5-840e-02fada0dd3b9'))).to.eql(mockUpdatedState)
   });
 
   it('should update all other "selected" properties to false when a category is selected', function() {
-    const updatedCategoryState = categoriesReducer(mockCategoryState, updateCategory('529ea59e-bf7e-11e5-840e-02fada0dd3b9'))
-    const newUpdatedCategoryState = categoriesReducer(mockCategoryState, updateCategory('01b06fa0-bf7e-11e5-9c1e-02fada0dd3b9'))
-    expect(categoriesReducer(updatedCategoryState, updateCategory('01b06fa0-bf7e-11e5-9c1e-02fada0dd3b9'))).to.eql(newUpdatedCategoryState);
+    const updatedCategoryState = categoriesReducer(mockCategoryState, selectCategory('529ea59e-bf7e-11e5-840e-02fada0dd3b9'))
+    const newUpdatedCategoryState = categoriesReducer(mockCategoryState, selectCategory('01b06fa0-bf7e-11e5-9c1e-02fada0dd3b9'))
+    expect(categoriesReducer(updatedCategoryState, selectCategory('01b06fa0-bf7e-11e5-9c1e-02fada0dd3b9'))).to.eql(newUpdatedCategoryState);
   });
 
   it('should return the current state when passed an invalid or undefined action', function() {
