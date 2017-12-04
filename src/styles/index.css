@@ -3,6 +3,10 @@ html {
     color: #333;
 }
 
+ul {
+    padding: 0;
+}
+
 li {
     list-style: none;
 }
@@ -10,7 +14,7 @@ li {
 .container {
     box-sizing: border-box;
     width: 90%;
-    padding: 20px;
+    padding: 40px;
     border: 1px solid #ccc;
     margin: 20px auto;
 }
@@ -22,26 +26,25 @@ li {
 }
 
 .category.selected {
-    font-weight: bold;
     text-decoration: underline;
 }
 
 .product {
-    margin: 5px 0 5px 10px;
+    margin: 5px 10px;
 }
 
-.product.selected {
+.selected {
     font-weight: bold;
 }
 
 .product p {
     font-weight: normal;
-    margin-top: 0;
+    margin-top: 5px;
 }
 
 input {
     height: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-left: 50px;
+    margin: 0 10px;
 }

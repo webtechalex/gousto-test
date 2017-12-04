@@ -1,10 +1,12 @@
 import React from 'react';
 
+import ProductDescription from './ProductDescription';
+
 function Product(props) {
   return (
     <li className={`product ${props.descriptionVisible ? 'selected' : ''}`} onClick={() => props.toggleProductVisibility(props.productId)}>
       {props.title}
-      {props.descriptionVisible && <p>{props.description}</p>}
+      <ProductDescription descriptionVisible={props.descriptionVisible} description={props.description} />
     </li>
   );
 }
