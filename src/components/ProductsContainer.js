@@ -8,7 +8,9 @@ const mapStateToProps = (state) => ({
   productsAreLoading: state.productsAreLoading,
   productsHaveErrored: state.productsHaveErrored,
   productsResponse: state.productsResponse,
-  descriptionVisible: state.descriptionVisible
+  descriptionVisible: state.descriptionVisible,
+  categoriesResponse: state.categoriesResponse,
+  productSearchInput: state.productSearchInput
 });
 
 const mapDispatchToProps = (dispatch) => {

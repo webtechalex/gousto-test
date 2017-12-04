@@ -15,7 +15,7 @@ class Products extends Component {
         {this.props.productsAreLoading && <p>Loading products...</p>}
         <ul>
           {this.props.productsResponse &&
-          this.props.productsResponse.map(product =>
+          this.props.productsResponse.filter(product => product.title.toLowerCase().indexOf(this.props.productSearchInput.toLowerCase()) > -1).map(product =>
             <Product
               key={product.id}
               productId={product.id}
