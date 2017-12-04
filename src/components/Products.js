@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
 import Product from './Product';
+import {getSelectedCategory, filterProductsBySelection} from '../helpers';
 
 class Products extends Component {
   constructor(props) {
@@ -15,7 +16,7 @@ class Products extends Component {
         {this.props.productsAreLoading && <p>Loading products...</p>}
         <ul>
           {this.props.productsResponse &&
-          this.props.productsResponse.filter(product => product.title.toLowerCase().indexOf(this.props.productSearchInput.toLowerCase()) > -1).map(product =>
+          filterProductsBySelection(this.props.productsResponse, getSelectedCategory(this.props.categoriesResponse), this.props.productSearchInput).map(product =>
             <Product
               key={product.id}
               productId={product.id}

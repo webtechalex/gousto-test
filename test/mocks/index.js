@@ -825,6 +825,173 @@ export const mockProductState = [
   }
 ]
 
+export const mockFilteredProductStateByInputValue = [
+  {
+    "id": "0009468c-33e9-11e7-b485-02859a19531d",
+    "title": "Borsao Macabeo",
+    "description": "A flavoursome Summer wine made from the indigenous Macabeo grape in northern Spain. A balanced, modern white with flavours of ripe peach, zesty lemon and nutty undertones, it leaves the palate with a clean and fruity finish.",
+    "descriptionVisible": false,
+    "categories": [
+      {
+        "id": "faeedf8a-bf7d-11e5-a0f9-02fada0dd3b9",
+        "title": "Drinks Cabinet",
+        "box_limit": 7,
+        "is_default": false,
+        "recently_added": false,
+        "hidden": false,
+        "pivot": {
+          "created_at": "2017-05-08T13:22:46+0100"
+        }
+      },
+      {
+        "id": "785741fc-3854-11e6-87a5-06f9522b85fb",
+        "title": "Large Alcohol",
+        "box_limit": 2,
+        "is_default": false,
+        "recently_added": false,
+        "hidden": true,
+        "pivot": {
+          "created_at": "2017-05-08T13:22:46+0100"
+        }
+      }
+    ]
+  }
+]
+
+export const mockFilteredProductStateByCategory = [
+  {
+    "id": "0009468c-33e9-11e7-b485-02859a19531d",
+    "title": "Borsao Macabeo",
+    "description": "A flavoursome Summer wine made from the indigenous Macabeo grape in northern Spain. A balanced, modern white with flavours of ripe peach, zesty lemon and nutty undertones, it leaves the palate with a clean and fruity finish.",
+    "descriptionVisible": false,
+    "categories": [
+      {
+        "id": "faeedf8a-bf7d-11e5-a0f9-02fada0dd3b9",
+        "title": "Drinks Cabinet",
+        "box_limit": 7,
+        "is_default": false,
+        "recently_added": false,
+        "hidden": false,
+        "pivot": {
+          "created_at": "2017-05-08T13:22:46+0100"
+        }
+      },
+      {
+        "id": "785741fc-3854-11e6-87a5-06f9522b85fb",
+        "title": "Large Alcohol",
+        "box_limit": 2,
+        "is_default": false,
+        "recently_added": false,
+        "hidden": true,
+        "pivot": {
+          "created_at": "2017-05-08T13:22:46+0100"
+        }
+      }
+    ]
+  },
+  {
+    "id": "02c225f2-63b4-11e6-8516-023d2759e21d",
+    "title": "Rioja Reserva, Baron de Ebro",
+    "description": "Intriguing notes of vanilla and chocolate make this fruity, full-bodied wine unique. With a long, pleasant finish and woody aroma supporting it, this characterful wine is a good match with beef dishes.\nABV 14%.",
+    "descriptionVisible": false,
+    "categories": [
+      {
+        "id": "faeedf8a-bf7d-11e5-a0f9-02fada0dd3b9",
+        "title": "Drinks Cabinet",
+        "box_limit": 7,
+        "is_default": false,
+        "recently_added": false,
+        "hidden": false,
+        "pivot": {
+          "created_at": "2016-08-31T12:32:39+0100"
+        }
+      },
+      {
+        "id": "785741fc-3854-11e6-87a5-06f9522b85fb",
+        "title": "Large Alcohol",
+        "box_limit": 2,
+        "is_default": false,
+        "recently_added": false,
+        "hidden": true,
+        "pivot": {
+          "created_at": "2016-08-31T12:32:39+0100"
+        }
+      },
+      {
+        "id": "a44b4c22-e489-11e6-9d77-027ca04bdf39",
+        "title": "Most Popular",
+        "box_limit": 2,
+        "is_default": false,
+        "recently_added": false,
+        "hidden": false,
+        "pivot": {
+          "created_at": "2017-02-08T09:49:46+0000"
+        }
+      }
+    ]
+  },
+  {
+    "id": "03117030-9127-11e6-8019-02886f33f4e9",
+    "title": "Bantry Bay Chenin Blanc",
+    "description": "South Africa have adopted the Chenin Blanc grape, and to great effect, showcased in this wine. With delicate floral notes and a subtle pineapple flavour joined by striking lemon and grapefruit notes, it pairs particularly well with seafood. \nABC 12.5%",
+    "descriptionVisible": false,
+    "categories": [
+      {
+        "id": "faeedf8a-bf7d-11e5-a0f9-02fada0dd3b9",
+        "title": "Drinks Cabinet",
+        "box_limit": 7,
+        "is_default": false,
+        "recently_added": false,
+        "hidden": false,
+        "pivot": {
+          "created_at": "2016-10-13T09:26:04+0100"
+        }
+      },
+      {
+        "id": "785741fc-3854-11e6-87a5-06f9522b85fb",
+        "title": "Large Alcohol",
+        "box_limit": 2,
+        "is_default": false,
+        "recently_added": false,
+        "hidden": true,
+        "pivot": {
+          "created_at": "2016-10-13T09:26:04+0100"
+        }
+      }
+    ]
+  },
+  {
+    "id": "05de669c-33e8-11e7-94c4-02859a19531d",
+    "title": "Nieto Malbec, Mendoza",
+    "description": "This great Argentinian Malbec from the well known Mendoza region is made from 40+ year old vines. Fruit flavour blends with hints of clove, pepper and cinnamon spice, with a fresh finish that's lovely with chicken and beef dishes. ",
+    "descriptionVisible": false,
+    "categories": [
+      {
+        "id": "faeedf8a-bf7d-11e5-a0f9-02fada0dd3b9",
+        "title": "Drinks Cabinet",
+        "box_limit": 7,
+        "is_default": false,
+        "recently_added": false,
+        "hidden": false,
+        "pivot": {
+          "created_at": "2017-05-08T13:15:53+0100"
+        }
+      },
+      {
+        "id": "785741fc-3854-11e6-87a5-06f9522b85fb",
+        "title": "Large Alcohol",
+        "box_limit": 2,
+        "is_default": false,
+        "recently_added": false,
+        "hidden": true,
+        "pivot": {
+          "created_at": "2017-05-08T13:15:53+0100"
+        }
+      }
+    ]
+  }
+]
+
 export const mockUpdatedProducts = [
   {
     "id": "0009468c-33e9-11e7-b485-02859a19531d",

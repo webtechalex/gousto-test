@@ -28,8 +28,15 @@ import {
   mockUpdatedState,
   mockProductData,
   mockProductState,
-  mockUpdatedProducts
+  mockUpdatedProducts,
+  mockFilteredProductStateByCategory,
+  mockFilteredProductStateByInputValue
 } from './mocks';
+
+import {
+  getSelectedCategory,
+  filterProductsBySelection
+} from '../src/helpers';
 
 describe('environment', function() {
   it('should run a test', function() {
@@ -106,5 +113,38 @@ describe('productSearchInputFieldReducer', function() {
 
   it('should update the productSearchInputField state when passed updateProductSearchInputValue action', function() {
     expect(productSearchInput('', updateProductSearchInputValue('hello'))).to.equal('hello');
+  });
+});
+
+describe('getSelectedCategory', function() {
+  it('should return null if no category is selected', function() {
+    expect(getSelectedCategory(mockCategoryState)).to.equal(null);
+  });
+  it('should return the selected category object if one is selected', function() {
+    expect(getSelectedCategory(mockUpdatedState)).to.eql({
+      "id": "529ea59e-bf7e-11e5-840e-02fada0dd3b9",
+      "title": "Kitchenware",
+      "selected": true
+    });
+  });
+});
+
+describe('filterProductsBySelection', function() {
+  const mockSelectedCategory = {
+    "id": "faeedf8a-bf7d-11e5-a0f9-02fada0dd3b9",
+    "title": "Drinks Cabinet",
+    "selected": true
+  }
+  it('should return all products if other arguments are falsy', function() {
+    expect(filterProductsBySelection(mockProductState)).to.equal(mockProductState);
+  });
+  it('should return all products whose category lists contain id properties equal to the selected category', function() {
+    expect(filterProductsBySelection(mockProductState, mockSelectedCategory)).to.eql(mockFilteredProductStateByCategory);
+  });
+  it('should return all products whose titles contain the value in the productSearchInput', function() {
+    expect(filterProductsBySelection(mockProductState, null, 'Borsa')).to.eql(mockFilteredProductStateByInputValue);
+  });
+  it('should return all products whose titles contain the value in the productSearchInput, even if a category is selected', function() {
+    expect(filterProductsBySelection(mockProductState, mockSelectedCategory, 'Borsa')).to.eql(mockFilteredProductStateByInputValue);
   });
 });
