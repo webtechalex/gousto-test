@@ -1,0 +1,47 @@
+html {
+    font-family: sans-serif;
+    color: #333;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    box-sizing: border-box;
+    width: 90%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 20px auto;
+}
+
+.category {
+    display: inline-block;
+    margin: 5px 10px;
+    cursor: pointer;
+}
+
+.category.selected {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.product {
+    margin: 5px 0 5px 10px;
+}
+
+.product.selected {
+    font-weight: bold;
+}
+
+.product p {
+    font-weight: normal;
+    margin-top: 0;
+}
+
+input {
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 50px;
+}

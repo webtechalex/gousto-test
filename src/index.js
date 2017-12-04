@@ -7,6 +7,8 @@ import thunk from 'redux-thunk';
 import productSearchApp from './reducers';
 import App from './components/App';
 
+
+
 const store = createStore(productSearchApp, applyMiddleware(thunk));
 
 ReactDOM.render(

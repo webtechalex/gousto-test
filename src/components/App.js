@@ -4,9 +4,11 @@ import CategoriesContainer from './CategoriesContainer';
 import ProductSearchInputContainer from './ProductSearchInputContainer';
 import ProductsContainer from './ProductsContainer';
 
+import '../styles/index.css';
+
 function App() {
   return (
-    <div>
+    <div className="container">
       <CategoriesContainer />
       <ProductSearchInputContainer />
       <ProductsContainer />
