@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 
+import Category from './Category';
+
 class Categories extends Component {
   constructor(props) {
     super(props);
@@ -11,12 +13,12 @@ class Categories extends Component {
     return (
       <div>
         {this.props.categoriesAreLoading && <p>Loading categories...</p>}
-        <ul>{
-          this.props.categoriesResponse &&
+        <ul>
+          {this.props.categoriesResponse &&
           this.props.categoriesResponse.map(category =>
-            <li className="category" key={category.id}>{category.title}</li>
-          )
-        }</ul>
+            <Category key={category.id} title={category.title} />
+          )}
+        </ul>
       </div>
     );
   }
