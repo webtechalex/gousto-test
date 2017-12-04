@@ -1,10 +1,14 @@
 import React from 'react';
 
 import CategoriesContainer from './CategoriesContainer';
+import ProductSearchInputContainer from './ProductSearchInputContainer';
 
 function App() {
   return (
-    <CategoriesContainer />
+    <div>
+      <CategoriesContainer />
+      <ProductSearchInputContainer />
+    </div>
   );
 }
 
