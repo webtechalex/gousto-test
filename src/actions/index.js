@@ -52,10 +52,10 @@ export const fetchProductsError = (productsHaveErrored) => {
   };
 }
 
-export const fetchProductsSuccess = (products) => {
+export const fetchProductsSuccess = (productsResponse) => {
   return {
     type: FETCH_PRODUCTS_SUCCESS,
-    products
+    productsResponse
   }
 }
 
@@ -91,7 +91,7 @@ export const fetchProducts = () => {
 
     axios.get('https://api.gousto.co.uk/products/v2.0/products?includes[]=categories&includes[]=attributes&sort=position&image_sizes[]=365&image_sizes[]=400&period_id=120')
       .then(json => {
-        dispatch(fetchProductsSuccess(json.data));
+        dispatch(fetchProductsSuccess(json.data.data));
         dispatch(fetchProductsRequest(false));
       });
   }

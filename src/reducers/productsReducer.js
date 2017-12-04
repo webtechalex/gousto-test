@@ -3,7 +3,7 @@ import {FETCH_PRODUCTS_SUCCESS, TOGGLE_PRODUCT_VISIBILITY} from '../actions';
 const productsResponse = (state = [], action) => {
   switch (action && action.type) {
     case FETCH_PRODUCTS_SUCCESS: {
-      return action.products.map(product => {
+      return action.productsResponse.map(product => {
         return {
           id: product.id,
           title: product.title,
