@@ -1,6 +1,6 @@
 import {FETCH_CATEGORIES_ERROR} from '../actions';
 
-const categoriesHaveErrored = (state = false, action) => {
+const categoriesHaveErrored = (state = '', action) => {
   if(action && action.type === FETCH_CATEGORIES_ERROR) {
     return action.categoriesHaveErrored;
   }

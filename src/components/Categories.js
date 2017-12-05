@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 
 import Category from './Category';
+import Error from './Error';
+import Loading from './Loading';
 
 class Categories extends Component {
   constructor(props) {
@@ -12,8 +14,8 @@ class Categories extends Component {
   render() {
     return (
       <div>
-        {this.props.categoriesAreLoading && <p>Loading categories...</p>}
-        {this.props.categoriesHaveErrored && <p>{this.props.categoriesHaveErrored}</p>}
+        <Loading loading={this.props.categoriesAreLoading} />
+        <Error error={this.props.categoriesHaveErrored} />
         <ul>
           {this.props.categoriesResponse &&
             this.props.categoriesResponse.map(category =>
