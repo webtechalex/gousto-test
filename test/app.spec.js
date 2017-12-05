@@ -12,7 +12,6 @@ import {
 
 import {
   fetchCategoriesSuccess,
-  selectCategory,
   fetchProductsSuccess,
   toggleProductVisibility,
   fetchCategoriesRequest,
@@ -25,7 +24,6 @@ import {
 import {
   mockCategoryData,
   mockCategoryState,
-  mockUpdatedState,
   mockProductData,
   mockProductState,
   mockUpdatedProducts,
@@ -34,7 +32,6 @@ import {
 } from './mocks';
 
 import {
-  getSelectedCategory,
   filterProductsBySelection
 } from '../src/helpers';
 
