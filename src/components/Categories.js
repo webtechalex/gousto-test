@@ -16,7 +16,13 @@ class Categories extends Component {
         <ul>
           {this.props.categoriesResponse &&
             this.props.categoriesResponse.map(category =>
-              <Category key={category.id} categoryId={category.id} title={category.title} selectCategory={this.props.selectCategory} selected={category.selected}/>
+              <Category
+                key={category.id}
+                categoryId={category.id}
+                title={category.title}
+                selectCategory={this.props.selectCategory}
+                selected={category.selected}
+              />
             )
           }
         </ul>

@@ -4,12 +4,13 @@ import {bindActionCreators} from 'redux';
 import {fetchProducts, toggleProductVisibility} from '../actions';
 import Products from './Products';
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state, ownProps) => ({
   productsAreLoading: state.productsAreLoading,
   productsHaveErrored: state.productsHaveErrored,
   productsResponse: state.productsResponse,
   categoriesResponse: state.categoriesResponse,
-  productSearchInput: state.productSearchInput
+  productSearchInput: state.productSearchInput,
+  category: ownProps.category
 });
 
 const mapDispatchToProps = (dispatch) => {

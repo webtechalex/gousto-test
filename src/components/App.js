@@ -6,12 +6,12 @@ import ProductsContainer from './ProductsContainer';
 
 import '../styles/index.css';
 
-function App() {
+function App({match: {params}}) {
   return (
     <div className="container">
-      <CategoriesContainer />
+      <CategoriesContainer selectedCategory={params.category} />
       <ProductSearchInputContainer />
-      <ProductsContainer />
+      <ProductsContainer category={params.category} />
     </div>
   );
 }
