@@ -11,7 +11,7 @@ Use ```npm run test``` to start the test environment.
 Use ```npm run build``` to build for deployment.
 
 ##Synopsis
-For a project of this small size, I have separated concerns horizontally. That is to say, files are organised by the role they play in the application. Unit tests are kept in a single location. As a commercial application, concerns are better separated vertically: The src contains a module for the categories along with its tests, reducers, actions, components.  This enables large teams to work on different areas of an application while minimising conflicts in version control.
+For a project of this small size, I have separated concerns horizontally. That is to say, files are organised by the role they play in the application. Unit tests are kept in a single location. In a commercial application, concerns are better separated vertically: The src contains a module for the categories along with its tests, reducers, actions, components.  This enables large teams to work on different areas of an application while minimising conflicts in version control and maximising application scalability.
 
 I opted for a very simple Webpack configuration.  This could be extended later on.
 

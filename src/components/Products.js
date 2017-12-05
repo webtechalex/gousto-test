@@ -14,6 +14,7 @@ class Products extends Component {
     return (
       <div>
         {this.props.productsAreLoading && <p>Loading products...</p>}
+        {this.props.productsHaveErrored && <p>{this.props.productsHaveErrored}</p>}
         <ul>
           {this.props.productsResponse &&
             filterProductsBySelection(this.props.productsResponse, this.props.category, this.props.productSearchInput).map(product =>

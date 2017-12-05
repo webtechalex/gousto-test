@@ -10,10 +10,10 @@ class Categories extends Component {
     this.props.fetchCategories();
   }
   render() {
-    console.log(this.props.categoriesResponse);
     return (
       <div>
         {this.props.categoriesAreLoading && <p>Loading categories...</p>}
+        {this.props.categoriesHaveErrored && <p>{this.props.categoriesHaveErrored}</p>}
         <ul>
           {this.props.categoriesResponse &&
             this.props.categoriesResponse.map(category =>
