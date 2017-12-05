@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 export const FETCH_CATEGORIES_SUCCESS = 'FETCH_CATEGORIES_SUCCESS';
-export const SELECT_CATEGORY = 'SELECT_CATEGORY';
 export const FETCH_PRODUCTS_SUCCESS = 'FETCH_PRODUCTS_SUCCESS';
 export const TOGGLE_PRODUCT_VISIBILITY = 'TOGGLE_PRODUCT_VISIBILITY';
 export const FETCH_CATEGORIES_REQUEST = 'FETCH_CATEGORIES_REQUEST';
@@ -28,13 +27,6 @@ export const fetchCategoriesSuccess = (categoriesResponse) => {
   return {
     type: FETCH_CATEGORIES_SUCCESS,
     categoriesResponse
-  };
-};
-
-export const selectCategory = (id) => {
-  return {
-    type: SELECT_CATEGORY,
-    id
   };
 };
 

@@ -61,18 +61,8 @@ describe('categoriesReducer', function() {
     expect(categoriesHaveErrored(true, fetchCategoriesError(false))).to.equal(false);
   });
 
-  it('should map id, title and selected state to each received category', function() {
+  it('should map id and title states to each received category', function() {
     expect(categoriesResponse([], fetchCategoriesSuccess(mockCategoryData))).to.eql(mockCategoryState);
-  });
-
-  it('should update the "selected" property when a category is selected', function() {
-    expect(categoriesResponse(mockCategoryState, selectCategory('529ea59e-bf7e-11e5-840e-02fada0dd3b9'))).to.eql(mockUpdatedState)
-  });
-
-  it('should update all other "selected" properties to false when a category is selected', function() {
-    const updatedCategoryState = categoriesResponse(mockCategoryState, selectCategory('529ea59e-bf7e-11e5-840e-02fada0dd3b9'))
-    const newUpdatedCategoryState = categoriesResponse(mockCategoryState, selectCategory('01b06fa0-bf7e-11e5-9c1e-02fada0dd3b9'))
-    expect(categoriesResponse(updatedCategoryState, selectCategory('01b06fa0-bf7e-11e5-9c1e-02fada0dd3b9'))).to.eql(newUpdatedCategoryState);
   });
 
   it('should return the current state when passed an invalid or undefined action', function() {
@@ -113,19 +103,6 @@ describe('productSearchInputFieldReducer', function() {
 
   it('should update the productSearchInputField state when passed updateProductSearchInputValue action', function() {
     expect(productSearchInput('', updateProductSearchInputValue('hello'))).to.equal('hello');
-  });
-});
-
-describe('getSelectedCategory', function() {
-  it('should return null if no category is selected', function() {
-    expect(getSelectedCategory(mockCategoryState)).to.equal(null);
-  });
-  it('should return the selected category object if one is selected', function() {
-    expect(getSelectedCategory(mockUpdatedState)).to.eql({
-      "id": "529ea59e-bf7e-11e5-840e-02fada0dd3b9",
-      "title": "Kitchenware",
-      "selected": true
-    });
   });
 });
 

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 import Product from './Product';
-import {getSelectedCategory, filterProductsBySelection} from '../helpers';
+import {filterProductsBySelection} from '../helpers';
 
 class Products extends Component {
   constructor(props) {

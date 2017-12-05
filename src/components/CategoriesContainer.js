@@ -1,7 +1,7 @@
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 
-import {fetchCategories, selectCategory} from '../actions';
+import {fetchCategories} from '../actions';
 import Categories from './Categories';
 
 const mapStateToProps = (state) => ({
@@ -12,8 +12,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({
-    fetchCategories,
-    selectCategory
+    fetchCategories
   }, dispatch);
 };
 

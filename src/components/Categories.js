@@ -10,6 +10,7 @@ class Categories extends Component {
     this.props.fetchCategories();
   }
   render() {
+    console.log(this.props.categoriesResponse);
     return (
       <div>
         {this.props.categoriesAreLoading && <p>Loading categories...</p>}
@@ -20,7 +21,6 @@ class Categories extends Component {
                 key={category.id}
                 categoryId={category.id}
                 title={category.title}
-                selectCategory={this.props.selectCategory}
                 selected={category.selected}
               />
             )
