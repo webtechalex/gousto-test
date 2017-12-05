@@ -3,6 +3,8 @@
 ##Installation
 Clone the repo and ```npm install``` in the working directory to install dependencies.
 
+For cross origin accessibility please disable cross origin restrictions in your browser. Safari: Develop/Disable Cross Origin Restrictions, Chrome: install the [Allow-Control-Allow-Origin](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi) plugin.
+
 ##Running
 Use ```npm run start``` and navigate to [http://localhost:8080/](http://localhost:8080/) in your browser of choice to run the project locally.
 
